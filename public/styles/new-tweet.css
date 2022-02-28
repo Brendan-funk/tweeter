@@ -1,0 +1,35 @@
+.new-tweet {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  
+  font-family:'Source sans pro','sans-serif';
+}
+form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#submit {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+textarea{
+  border:none;
+  outline:none;
+  background: transparent;
+  border-bottom:2px solid #000000;
+}
+button{
+  background-color: #4056A1;
+  font-family: 'Bungee','sans-serif';
+  font-size: 1em;
+  color: #ffffff;
+}
+.counter{
+  font-family: 'Bungee','sans-serif';
+  font-weight:600;
+}
+label{
+  align-self:flex-start
+}
