@@ -3,31 +3,39 @@ article {
   flex-direction: column;
   border: 3px solid black;
   margin-top: 2em;
+  font-family: 'Source sans pro', sans-serif;
+}
+article:hover {
+  box-shadow: 0 0 11px #6e6d6d;
 }
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 1.5em;
+  padding-left: 1.5em;
 }
 #username {
   display: flex;
   justify-self: flex-end;
-  margin-right: 1.5em;
+  padding-right: 1.5em;
 }
 #past-tweet {
   display: flex;
   justify-self: flex-start;
-  margin-left: 1.5em;
-  margin-right:1.5em;
+  padding-left: 1.5em;
+  padding-right:1.5em;
   border-bottom: 2px solid black;
 }
 footer {
   display: flex;
   justify-content: space-between;
-  margin-left:1.5em;
-  margin-right:1.5em;
+  padding-left:1.5em;
+  padding-right:1.5em;
 }
 #icons {
   justify-self: flex-end;
+  flex-direction: row-reverse;
+}
+i:hover {
+  color:#ffff41;
 }
