@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" /> 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/past-tweets.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -31,7 +33,7 @@
         <i class="fa-solid fa-angles-down" id="arrowIcon"></i>
       </div>
     </nav>
-    <header>
+    <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -50,11 +52,22 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div id = 'submit'>
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      
+      <section class="tweets">
+        <article>
+          <header>
+            <p>Icon Name</p>
+            <p id="username">Username</p>
+          </header>
+          <p id="past-tweet">Tweet</p>
+          <footer>
+            <p>Date</p>
+            <p id ="icons"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-flag"></i></p>
+          </footer>
+      </section>
     </main>
   </body>
 </html>

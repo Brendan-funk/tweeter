@@ -1,0 +1,33 @@
+article {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  margin-top: 2em;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1.5em;
+}
+#username {
+  display: flex;
+  justify-self: flex-end;
+  margin-right: 1.5em;
+}
+#past-tweet {
+  display: flex;
+  justify-self: flex-start;
+  margin-left: 1.5em;
+  margin-right:1.5em;
+  border-bottom: 2px solid black;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left:1.5em;
+  margin-right:1.5em;
+}
+#icons {
+  justify-self: flex-end;
+}
