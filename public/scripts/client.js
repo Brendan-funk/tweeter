@@ -3,16 +3,22 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const safeHTML = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = function(data) {
   const tweet = `<article>
                     <header>
                       <div id ='avatarName'>
-                        <img src = '${data['user']['avatars']}'> </img> 
+                        <img src = '${(data['user']['avatars'])}'> </img> 
                         <p>${data['user']['name']} </p>
                       </div>
                       <p id = 'username'> ${data['user']['handle']} </p>
                     </header>
-                    <p id = past-tweet>${data['content']['text']} </p>
+                    <p id = past-tweet>${safeHTML(data['content']['text'])} </p>
                     <footer>
                       <p>${timeago.format(data['created_at'])}</p>
                       <p id ="icons"><i class="fa-solid fa-heart"></i>  <i class="fa-solid fa-retweet"></i>  <i class="fa-solid fa-flag"></i></p>
@@ -34,6 +40,7 @@ const loadtweets = function(){
     renderTweets(arr);
   })
 };
+
 
 $(document).ready(function() {
   // Test / driver code (temporary). Eventually will get this from the server.
