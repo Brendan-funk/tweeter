@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+let writeToggle = true;
 const safeHTML = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -67,7 +68,15 @@ $(document).ready(function() {
       loadtweets();
     }
   });
-  
+  $('#write-new').on('click', function() {
+    if(writeToggle) {
+      $('.new-tweet').slideUp();
+      writeToggle = false;
+    } else {
+      $('.new-tweet').slideDown();
+      writeToggle = true;
+    }
+  })
   
   
 });

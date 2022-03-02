@@ -30,3 +30,20 @@ nav{
   color: red;
   align-self:center;
 }
+#write-new {
+  border: none;
+  padding: none;
+  background: transparent;
+  align-self: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#write-new:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0% { transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
