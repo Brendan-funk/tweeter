@@ -26,13 +26,10 @@ button{
   font-size: 1em;
   color: #ffffff;
 }
-#counter{
+.counter{
   font-family: 'Bungee','sans-serif';
   font-weight:600;
 }
 label{
   align-self:flex-start
-}
-.red {
-  color:red;
 }

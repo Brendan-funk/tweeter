@@ -1,14 +1,12 @@
 $(document).ready(function() {
-  const tweetText = document.getElementById('tweet-text');
-  const counter = document.getElementById('counter');
-  const max = 140;
-  tweetText.addEventListener('input',() => {
-    const length = tweetText.value.length;
-    if(max - length < 0) {
-      counter.classList.add('red');
+  $('#tweet-text').on('input', function(event){
+    const max = 140;
+    const $counter = $(this).closest('form').find('.counter');
+    if (max - this.value.length < 0) {
+      $counter.css('color', 'red');
     } else {
-      counter.classList.remove('red');
+      $counter.css('color','black');
     }
-    counter.innerHTML = max - length;
-  });
+    $counter.text(max - this.value.length);
+  })
 });
