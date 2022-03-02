@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  
   font-family:'Source sans pro','sans-serif';
 }
 form {
@@ -25,6 +24,8 @@ button{
   font-family: 'Bungee','sans-serif';
   font-size: 1em;
   color: #ffffff;
+  width:100px;
+  height:50px;
 }
 .counter{
   font-family: 'Bungee','sans-serif';
@@ -32,4 +33,21 @@ button{
 }
 label{
   align-self:flex-start
+}
+#error-message{
+  width: 50%;
+  align-self: center;
+}
+.warning {
+  background-color: rgb(255, 187, 0);
+  border: 1px solid black;
+  font-family: 'Source Serif Pro',sans-serif;
+
+}
+
+.error {
+  color: rgb(238, 234, 177);
+  background-color: #f36161;
+  border: 1px solid black;
+  font-family: 'Source Serif Pro',sans-serif;
 }

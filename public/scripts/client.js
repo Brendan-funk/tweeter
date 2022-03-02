@@ -21,7 +21,7 @@ const createTweetElement = function(data) {
                     <p id = past-tweet>${safeHTML(data['content']['text'])} </p>
                     <footer>
                       <p>${timeago.format(data['created_at'])}</p>
-                      <p id ="icons"><i class="fa-solid fa-heart"></i>  <i class="fa-solid fa-retweet"></i>  <i class="fa-solid fa-flag"></i></p>
+                      <p id ="icons"><i class="fa-solid fa-heart interact"></i>  <i class="fa-solid fa-retweet interact"></i>  <i class="fa-solid fa-flag interact"></i></p>
                     </footer>
                   </article>`
   return tweet;
@@ -49,11 +49,17 @@ $(document).ready(function() {
     event.preventDefault();
     const $textarea = $(this).find('textarea');
     const $counter = $(this).find('.counter');
+    const $error = $(this).find('#error-message');
+    $error.css('display', 'none');
     if($textarea.val() === "") {
-      alert('Tweet is empty');
-    } else if ($counter < 0) {
-      alert('Tweet is too long');
+      $error.slideDown('slow');
+      $error.addClass('error');
+    } else if ($textarea.val().length > 140) {
+      $error.removeClass('warning');
+      $error.addClass('error');
+      $error.slideDown();
     } else {
+      $error.text('');
       const body = $(this).serialize();
       $.post('/tweets',body);
       $textarea.val('');

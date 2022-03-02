@@ -50,6 +50,7 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method = 'post' action = '/tweets' id="tweet-form">
+          <p id="error-message" hidden>'<i class="fa-solid fa-triangle-exclamation"></i> <span id = error-type>Nothing To Post</span> <i class="fa-solid fa-triangle-exclamation"></i>'</p>
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div id = 'submit'>
