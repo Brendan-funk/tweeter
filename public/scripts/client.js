@@ -5,17 +5,6 @@
  */
 $(document).ready(function() {
   // Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
   const createTweetElement = function(data) {
     const tweet = `<article>
                       <header>
@@ -35,10 +24,27 @@ const tweetData = {
   }
   $('#tweet-form').submit(function(event){
     event.preventDefault();
-    const body = $(this).serialize();
-    console.log(body);
-    $.post('/tweets',body,);
+    const $textarea = $(this).find('textarea');
+    if($textarea.val() === "") {
+      alert('Tweet is empty');
+    } else if ($textarea.val().length > 140) {
+      alert('Tweet is too long');
+    } else {
+      const body = $(this).serialize();
+      $.post('/tweets',body,);
+    }
   });
-  const $tweet = createTweetElement(tweetData);
-  $('#tweets-container').append($tweet);
-})
+  const renderTweets = function(arr) {
+    for (const obj of arr) {
+      const $tweet = createTweetElement(obj);
+      $('#tweets-container').append($tweet);
+    }
+  }
+  const $loadtweets = function(){
+    $.ajax('/tweets', { method: 'GET' })
+    .then(function (arr) {
+      renderTweets(arr);
+    })
+  };
+  $loadtweets();
+});

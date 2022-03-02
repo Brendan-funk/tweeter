@@ -4,6 +4,7 @@ article {
   justify-content: space-evenly;
   border: 3px solid black;
   margin-top: 2em;
+  flex-wrap: wrap;
   font-family: 'Source sans pro', sans-serif;
 }
 article:hover {
@@ -27,11 +28,14 @@ header {
   padding-right: 1.5em;
 }
 #past-tweet {
-  display: flex;
+  display: inline-block;
   justify-self: flex-start;
+  word-break: break-word;
+  word-wrap: break-word;
   padding-left: 1.5em;
   padding-right:1.5em;
   border-bottom: 2px solid black;
+  
 }
 footer {
   display: flex;
