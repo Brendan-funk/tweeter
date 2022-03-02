@@ -4,9 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//booleon for the new tweet slide
 let writeToggle = true;
-$(document).ready(function () {
-  const scrollFunction = function () {
+
+
+$(document).ready(function() {
+
+  //checks if the user is no longer at the top of the page which then shows the scroll to top button
+  const scrollFunction = function() {
     const button = document.getElementById('top');
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       button.style.display = 'block';
@@ -15,20 +20,23 @@ $(document).ready(function () {
     }
   }
 
-  const loadtweets = function () {
+  //gets all tweets from database and gives them to the renderTweets function
+  const loadtweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function (arr) {
         renderTweets(arr);
       })
   };
 
-  const safeHTML = function (str) {
+  //makes the input from user into text instead of html
+  const safeHTML = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
 
-  const createTweetElement = function (data) {
+  //formating for new tweets from data object
+  const createTweetElement = function(data) {
     const tweet = `<article>
                     <header>
                       <div id ='avatarName'>
@@ -46,7 +54,8 @@ $(document).ready(function () {
     return tweet;
   }
 
-  const renderTweets = function (arr) {
+  //takes array of tweets and renders them from newest to oldest
+  const renderTweets = function(arr) {
     $('#tweets-container').empty();
     const array = arr.reverse();
     for (let obj of array) {
@@ -54,7 +63,9 @@ $(document).ready(function () {
       $('#tweets-container').append($tweet);
     }
   }
-  $('#tweet-form').submit(function (event) {
+
+  //takes the user input and checks if it meets requirements if so it sends the data to the surver and renders the new tweet
+  $('#tweet-form').submit(function(event) {
     event.preventDefault();
     const $textarea = $(this).find('textarea');
     const $counter = $(this).find('.counter');
@@ -75,7 +86,9 @@ $(document).ready(function () {
       loadtweets();
     }
   });
-  $('#write-new').on('click', function () {
+
+  //toggles the write new slider when button is pressed
+  $('#write-new').on('click', function() {
     if (writeToggle) {
       $('.new-tweet').slideUp();
       writeToggle = false;
@@ -84,10 +97,14 @@ $(document).ready(function () {
       writeToggle = true;
     }
   })
+
+  //sends user back to top when button is pressed
   $('#top').on('click', function() {
     window.scrollTo({top: 0, behavior: "smooth"});
-  })
-  window.onscroll = function () { scrollFunction() };
+  });
+
+  
+  window.onscroll = function () { scrollFunction(); };
   loadtweets();
 });
 
