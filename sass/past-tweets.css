@@ -5,13 +5,11 @@ article {
   border: 3px solid black;
   margin-top: 2em;
   flex-wrap: wrap;
-  font-family: "Source Serif Pro", sans-serif;
+  font-family: 'Source Serif Pro', sans-serif;
 }
-
 article:hover {
   box-shadow: 0 0 11px #6e6d6d;
 }
-
 header {
   display: flex;
   flex-flow: row nowrap;
@@ -24,36 +22,32 @@ header {
   flex-direction: row;
   justify-self: space-evenly;
 }
-
 #username {
   display: flex;
   justify-self: flex-end;
   padding-right: 1.5em;
 }
-
 #past-tweet {
   display: inline-block;
   justify-self: flex-start;
   word-break: break-word;
   word-wrap: break-word;
   padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-right:1.5em;
   border-bottom: 2px solid black;
+  
 }
-
 footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left:1.5em;
+  padding-right:1.5em;
 }
-
 #icons {
   justify-self: flex-end;
   flex-direction: row-reverse;
 }
-
 .interact:hover {
-  color: #ffff41;
+  color:#ffff41;
 }

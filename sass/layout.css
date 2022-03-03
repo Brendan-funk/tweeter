@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,41 +13,41 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", "sans-serif";
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
+ main {
   width: 90%;
   text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left:5%;
+  margin-right:5%;
   background-color: #f4f1ec;
   font-family: "Source Sans Pro", "sans-serif";
-}
+ }
 
-#top {
-  display: none;
-  position: fixed;
-  right: 30px;
-  bottom: 20px;
-  border-radius: 33%;
-  border: none;
-  background-color: red;
-  outline: none;
-}
+ #top {
+   display: none;
+   position:fixed;
+   right:30px;
+   bottom:20px;
+   border-radius: 33%;
+   border: none;
+   background-color: red;
+   outline: none;
+ }
 
-#top:hover {
+ #top:hover {
   background-color: #4056A1;
-}
+ }
 
-@media only screen and (min-width: 1024px) {
+ @media only screen and (min-width: 1024px) {
   body {
     display: flex;
     flex-direction: row;
@@ -56,7 +55,6 @@ main {
     margin-right: auto;
     margin-top: 90px;
   }
-
   .main-header {
     align-self: flex-start;
     z-index: -1;
@@ -66,8 +64,7 @@ main {
     height: 100%;
     background-position: fill;
   }
-
-  #avatar {
+  #avatar{
     margin-top: 20px;
   }
-}
+ }

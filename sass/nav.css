@@ -1,24 +1,23 @@
-nav {
-  top: 0;
-  position: fixed;
+nav{
+  top:0;
+  position:fixed;
   display: flex;
-  height: 120px;
-  width: 100%;
+  height:120px;
+  width:100%;
   background-color: #4056A1;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
   justify-content: space-between;
+  
 }
-
 .logo {
   display: inline-block;
-  font-family: "Bungee", "sans-serif";
+  font-family: 'Bungee', 'sans-serif';
   align-self: flex-end;
   font-size: 52px;
-  padding-bottom: 20px;
+  padding-bottom:20px;
 }
-
 .newTweet {
   display: flex;
   flex-flow: column nowrap;
@@ -26,13 +25,11 @@ nav {
   font-size: 24px;
   align-content: center;
 }
-
-#arrowIcon {
+#arrowIcon{
   padding-bottom: 1.5em;
   color: red;
-  align-self: center;
+  align-self:center;
 }
-
 #write-new {
   border: none;
   padding: none;
@@ -41,20 +38,12 @@ nav {
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-
 #write-new:hover {
   animation-name: bounce;
   animation-timing-function: ease;
 }
-
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
 }

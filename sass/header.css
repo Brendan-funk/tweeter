@@ -1,8 +1,9 @@
-.main-header {
+.main-header{
   margin-top: 90px;
   display: flex;
   height: 400px;
   width: 100%;
+  
   position: relative;
   flex-flow: column nowrap;
   align-items: center;
