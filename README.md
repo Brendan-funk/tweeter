@@ -6,13 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 
 ## Final Product
-!["Screenshot of Desktop Version"]
-## Getting Started
+!["Screenshot of Desktop Version"](https://github.com/Brendan-funk/tweeter/blob/main/docs/DesktopHome.png?raw=true)
 
-1. Clone your repository onto your local device.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["Screenshot of Mobile Verison](https://github.com/Brendan-funk/tweeter/blob/main/docs/mobileHome.png?raw=true)
+
+!["gif of Desktop New Tweet Toggle](https://github.com/Brendan-funk/tweeter/blob/main/docs/desktopNewTweet.gif?raw=true);
 
 ## Dependencies
 
@@ -21,3 +19,9 @@ This repository is the starter code for the project: Students will fork and clon
 - body-parser
 - chance
 
+## Getting Started
+
+1. Clone your repository onto your local device.
+2. Install dependencies using the `npm install` command.
+3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Go to <http://localhost:8080/> in your browser.
