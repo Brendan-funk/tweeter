@@ -1,8 +1,11 @@
+/*Variables to be used across the whole page */
 .main-header {
   display: flex;
   height: 400px;
   width: 100%;
   position: relative;
+  z-index: -1;
+  margin-top: 120px;
   flex-flow: column nowrap;
   align-items: center;
   background-color: #00c2b8;

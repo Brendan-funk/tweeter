@@ -1,3 +1,4 @@
+/*Variables to be used across the whole page */
 article {
   display: flex;
   flex-flow: column wrap;
@@ -6,6 +7,7 @@ article {
   margin-top: 2em;
   font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 2em;
+  margin-left: 2em;
 }
 article header {
   display: flex;

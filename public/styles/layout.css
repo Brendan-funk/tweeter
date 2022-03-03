@@ -1,3 +1,4 @@
+/*Variables to be used across the whole page */
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -41,6 +42,7 @@ body #top:hover {
   background-color: #4056A1;
 }
 
+/*For Desktop Users */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
@@ -59,6 +61,7 @@ body #top:hover {
     height: 100%;
     background-position: 100%;
     width: 50%;
+    margin-top: 0px;
   }
   body #avatar {
     margin-top: 20px;

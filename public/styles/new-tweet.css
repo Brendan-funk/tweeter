@@ -1,8 +1,10 @@
+/*Variables to be used across the whole page */
 .new-tweet {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
+  margin-left: 2em;
 }
 .new-tweet form {
   display: flex;
