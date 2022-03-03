@@ -1,37 +1,30 @@
 article {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: space-evenly;
   border: 3px solid black;
   margin-top: 2em;
-  flex-wrap: wrap;
-  font-family: "Source Serif Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 2em;
 }
-
-article:hover {
-  box-shadow: 0 0 11px #6e6d6d;
-}
-
-header {
+article header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   padding-left: 1.5em;
+  margin-top: 1em;
 }
-
-#avatarName {
+article header #avatarName {
   display: flex;
   flex-direction: row;
-  justify-self: space-evenly;
+  justify-self: space-between;
 }
-
-#username {
+article header #username {
   display: flex;
   justify-self: flex-end;
   padding-right: 1.5em;
 }
-
-#past-tweet {
+article #past-tweet {
   display: inline-block;
   justify-self: flex-start;
   word-break: break-word;
@@ -40,20 +33,22 @@ header {
   padding-right: 1.5em;
   border-bottom: 2px solid black;
 }
-
-footer {
+article footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  padding-bottom: 20px;
 }
-
-#icons {
+article footer #icons {
   justify-self: flex-end;
   flex-direction: row-reverse;
 }
-
-.interact:hover {
+article footer .interact:hover {
   color: #ffff41;
+}
+
+article:hover {
+  box-shadow: 0 0 11px #6e6d6d;
 }

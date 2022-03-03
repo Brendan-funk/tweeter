@@ -94,6 +94,7 @@ $(document).ready(function() {
       writeToggle = false;
     } else {
       $('.new-tweet').slideDown();
+      window.scrollTo({top: 0, behavior: "smooth"});
       writeToggle = true;
     }
   })

@@ -1,0 +1,62 @@
+@use 'variables';
+
+article {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  border: 3px solid black;
+  margin-top: 2em;
+  font-family: variables.$main-font;
+  margin-bottom: 2em;
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-left: variables.$main-padding;
+    margin-top: 1em;
+
+    #avatarName {
+      display: flex;
+      flex-direction: row;
+      justify-self: space-between;
+    }
+
+    #username {
+      display: flex;
+      justify-self: flex-end;
+      padding-right: variables.$main-padding;
+    }
+  }
+
+  #past-tweet {
+    display: inline-block;
+    justify-self: flex-start;
+    word-break: break-word;
+    word-wrap: break-word;
+    padding-left: variables.$main-padding;
+    padding-right: variables.$main-padding;
+    border-bottom: 2px solid black;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-left: variables.$main-padding;
+    padding-right: variables.$main-padding;
+    padding-bottom: 20px;
+
+    #icons {
+      justify-self: flex-end;
+      flex-direction: row-reverse;
+    }
+
+    .interact:hover {
+      color: #ffff41;
+    }
+  }
+}
+
+article:hover {
+  box-shadow: 0 0 11px #6e6d6d;
+}

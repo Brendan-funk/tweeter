@@ -1,0 +1,11 @@
+@use 'variables';
+.main-header {
+  display:flex;
+  height: 400px;
+  width:100%;
+  position:relative;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #00c2b8;
+  background-image: variables.$background-img;
+}

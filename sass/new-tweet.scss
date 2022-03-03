@@ -1,0 +1,61 @@
+@use 'variables';
+
+.new-tweet {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-family: variables.$main-font;
+
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  #submit {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+   textarea {
+     border: none;
+     outline: none;
+     background: transparent;
+     border-bottom:2px solid black;
+   }
+
+   button {
+     background-color: variables.$nav-background;
+     font-family: variables.$logo-font;
+     font-size: 1em;
+     color: white;
+     width: 100px;
+     height: 50px;
+   }
+
+   .counter {
+     font-family: variables.$logo-font;
+     font-weight: 600;
+   }
+
+   label {
+     align-self: flex-start
+   }
+
+   #error-message {
+     width: 50px;
+     align-self: center;
+   }
+
+   .warning {
+     background-color: variables.$warning;
+     border: variables.$error-border;
+     font-family: variables.$main-font;
+   }
+
+   .error {
+     background-color: variables.$error;
+     border: variables.$error;
+     font-family: variables.$main-font;
+   }
+}
